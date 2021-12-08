@@ -22,5 +22,13 @@
   ],
   "author": "Soul_YT",
   "license": "ISC",
-  "description": "A discord.js handler, easy to use."
+  "description": "A discord.js handler, easy to use.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoulYT1534/djs_handler_package.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SoulYT1534/djs_handler_package/issues"
+  },
+  "homepage": "https://github.com/SoulYT1534/djs_handler_package#readme"
 }
