@@ -1,4 +1,5 @@
 const array = []
+const array2 = []
 const db = require(`quick.db`)
 const map = new Map()
 const Discord = require(`discord.js`)
@@ -33,6 +34,12 @@ class Bot {
             if(!bot_name){
                 throw err = `Enter the bot name to login.`
             }
+            if(array2) array2.map(event => {
+     if(event.run) event.run(client)
+     else throw err = `Forget event_run.`
+            })
+            else
+            if(!array2) return;
 const config = map.get(bot_name)
 if(!config){
     throw err = `Bot name is incorrect.`
@@ -89,4 +96,9 @@ client.on("messageCreate", async (message) => {
     return data;
   }
   }
-  module.exports = {Command, Bot}
+  class Event {
+      constructor(data){
+          array2.push(data)
+      }
+  }
+  module.exports = {Command, Bot, Event}
